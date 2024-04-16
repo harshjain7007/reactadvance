@@ -1,0 +1,18 @@
+@import "./index.scss";
+
+.divContainer{
+     background-color: $primary-color;
+}
+
+.btn{
+     @include button-styles;
+}
+
+
+.parent{
+     background-color: red;
+     padding: 20px;
+     .child{
+          background-color: pink;
+     }
+}
