@@ -9,8 +9,7 @@ const Interceptor = () => {
      // console.log("Datda", data);
   return (
     <div>
-    
-     {data.data.title}
+     {data?.data?.title}
     </div>
   )
 }

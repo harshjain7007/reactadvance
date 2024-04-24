@@ -19,7 +19,8 @@ const Errors = React.lazy(() => import('./Pages/ErrorBoundry/Error'))
 const Styled = React.lazy(() => import('./Pages/StyledComponents/Styled'))
 
 // import Interceptor from './Pages/Interceptor/Interceptor'
-const Interceptor = React.lazy(() => import('./Pages/Interceptor/Interceptor'))
+// const Interceptor = React.lazy(() => import('./Pages/Interceptor/Interceptor'))
+const Inter = React.lazy(() => import('./Pages/Interceptor/Inter')) 
 
 // import CustomHook from './Pages/CustomHook/CustomHook'
 const CustomHook = React.lazy(() => import('./Pages/CustomHook/CustomHook'))
@@ -44,6 +45,16 @@ const Query = React.lazy(() => import('./Pages/ReactQuery/Query'))
 
 const UseLayoutHook = React.lazy(() => import('./Pages/UseLayoutEffectHook/UseLayoutHook'))
 
+const UseReducer = React.lazy(() => import('./Pages/useReducerHook/UseReducer')) 
+
+const AppDemo = React.lazy(() => import('./Pages/ContextApi/AppDemo')) 
+
+const Debauncing = React.lazy(() => import('./Pages/DebauncingThrottling/Debauncing'))  
+
+const Throttling = React.lazy(() => import('./Pages/DebauncingThrottling/Throttling'))  
+
+
+
 const App = () => {
 
   return (
@@ -57,7 +68,7 @@ const App = () => {
         <Route path="/UseMemo" element={<UseMemo />} />
         <Route path="/Errors" element={<Errors />} />
         <Route path="/Styled" element={<Styled />} />
-        <Route path="/Interceptor" element={<Interceptor />} />
+        <Route path="/Interceptor" element={<Inter />} />
         <Route path="/CustomHook" element={<CustomHook />} />
         <Route path="/Scss" element={<Scss />} />
         <Route path="/UseRefFocus" element={<UseRefFocus />} />
@@ -67,16 +78,12 @@ const App = () => {
         <Route path="/ReState" element={<ReState />} />
         <Route path="/reactQuery" element={<Query />} />
         <Route path="/UseLayoutHook" element={<UseLayoutHook />} />
+        <Route path="/UseReducer" element={<UseReducer />} />
+        <Route path="/contextApi" element={<AppDemo />} />
+        <Route path="/debauncing" element={<Debauncing />} />
+        <Route path="/throttling" element={<Throttling />} />
       </Routes>
       </Suspense>
-    
-      {/* Interceptor ------------------------------------- Pending*/}
-      {/* <Interceptor /> */}
-    {/* Debouncing & Throttling ---------------- Pending */}
-    {/* Context API ------------ Pending */}
-    {/* useReducer hook ------------ Pending */}
-    {/* useLayoutEffectHook ------ Pending */}
-    {/* ComponentWillUnmount in functional component ------------ Pending  */}
     </>
   )
 }
